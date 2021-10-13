@@ -115,7 +115,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "🔓 Mở khóa",
+                "🔓 Mở khóa video",
                 url = f"https://bom.to/nunhiquoc"
             )
         ]
