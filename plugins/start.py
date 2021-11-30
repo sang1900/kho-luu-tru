@@ -1,4 +1,3 @@
-#(©)Codexbotz
 import os
 import asyncio
 from pyrogram import Client, filters, __version__
@@ -16,7 +15,7 @@ from database.sql import add_user, query_msg
 
 
 
-WAIT_MSG = """<b>Processing ...</b>"""
+WAIT_MSG = """"<b>Đang xử lý ...</b>"""
 
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
@@ -115,16 +114,15 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "🔓 Mở khóa ngay",
-                url = f"https://by.com.vn/nunhiquoc"
-            )
+                "Join Channel",
+                url = client.invitelink)
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = '🔄 Thử lại',
+                    text = 'Try Again',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
